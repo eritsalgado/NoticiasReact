@@ -14,7 +14,6 @@ function App() {
       const url=`https://newsapi.org/v2/top-headlines?country=mx&category=${categoria}&apiKey=9ed3007abeaf4a08a863dcd47f06bab8`
       const respuesta = await fetch(url)
       const noticias = await respuesta.json()
-      console.log(noticias.articles)
       guardarNoticias(noticias.articles)
     }
 
